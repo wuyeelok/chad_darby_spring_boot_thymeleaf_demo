@@ -10,7 +10,10 @@
 <title>Thymeleaf Demo</title>
 </head>
 <body>
-	<p th:text="'Time on the server is ' + ${theDate}"></p>
+	<p
+		th:text="'This text will ONLY appear when using server to view.  Time on the server is ' + ${theDate}">This
+		text will NOT appear when using server, only appear during
+		offline/static.</p>
 
 </body>
 </html>
