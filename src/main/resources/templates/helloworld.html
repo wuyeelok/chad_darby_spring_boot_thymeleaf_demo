@@ -1,5 +1,5 @@
 <!doctype html>
-<html xmlns:th="http:www.thymeleaf.org">
+<html>
 <head>
 <!-- Required meta tags -->
 <meta charset="utf-8">
@@ -8,11 +8,11 @@
 
 
 <title>Thymeleaf Demo</title>
-<link rel="stylesheet" th:href="@{/css/demo.css}" />
+<link rel="stylesheet" data-th-href="@{/css/demo.css}" />
 </head>
 <body>
 	<p class="funny"
-		th:text="'This text will ONLY appear when using server to view.  Time on the server is ' + ${theDate}">This
+		data-th-text="'This text will ONLY appear when using server to view.  Time on the server is ' + ${theDate}">This
 		text will NOT appear when using server, only appear during
 		offline/static.</p>
 
