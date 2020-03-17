@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en" xmlns:th="http:www.thymeleaf.org">
+<html lang="en">
+
 <head>
 <!-- Required meta tags -->
 <meta charset="utf-8">
@@ -8,14 +9,16 @@
 
 
 <title>Employee Directory</title>
-
+<link rel="stylesheet" href="../static/css/demo.css"
+	data-th-href="@{/css/demo.css}" />
 </head>
+
 <body>
 
 	<h3>Employee Directory</h3>
 	<hr>
 
-	<table border="1">
+	<table>
 		<thead>
 			<tr>
 				<th>First Name</th>
@@ -25,13 +28,14 @@
 		</thead>
 
 		<tbody>
-			<tr th:each="tempEmployee : ${employees}">
-				<td th:text="${tempEmployee.firstName}" />
-				<td th:text="${tempEmployee.lastName}" />
-				<td th:text="${tempEmployee.email}" />
+			<tr data-th-each="tempEmployee : ${employees}">
+				<td data-th-text="${tempEmployee.firstName}">Donald</td>
+				<td data-th-text="${tempEmployee.lastName}">Trump</td>
+				<td data-th-text="${tempEmployee.email}">truetd@gmail.com</td>
 			</tr>
 		</tbody>
 	</table>
 
 </body>
+
 </html>
