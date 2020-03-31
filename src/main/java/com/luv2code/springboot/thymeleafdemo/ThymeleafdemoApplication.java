@@ -22,6 +22,7 @@ public class ThymeleafdemoApplication {
 	// Testing only, create data in DB when server start, see
 	// application.properties: createDatabaseIfNotExist=true
 	// application.properties: spring.jpa.hibernate.ddl-auto
+	// Reference: https://attacomsian.com/blog/spring-data-jpa-one-to-many-mapping
 	@Bean
 	public CommandLineRunner dbDataInit(EmployeeRepository employeeRepository) {
 		return (args) -> {
