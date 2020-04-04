@@ -15,6 +15,32 @@
 
 <body>
 
+	<div class="container">
+
+		<h3 data-th-text="'Employee Directory'">Employee Directory
+			OFFLINE</h3>
+		<hr>
+
+		<p class="h4 mb-4">Save Employee</p>
+
+		<form action="./list-employees.html"
+			data-th-action="@{/employees/save}" data-th-object="${employee}"
+			method="post">
+
+			<input type="text" data-th-field="*{firstName}"
+				class="form-control mb-4 col-4" placeholder="First name"> <input
+				type="text" data-th-field="*{lastName}"
+				class="form-control mb-4 col-4" placeholder="Last name"> <input
+				type="text" data-th-field="*{email}" class="form-control mb-4 col-4"
+				placeholder="Email">
+
+			<button type="submit" class="btn btn-info col-2">Save</button>
+		</form>
+
+		<hr>
+		<a href="./list-employees.html" data-th-href="@{/employees/list}">Back
+			to Employees List</a>
+	</div>
 
 
 </body>
