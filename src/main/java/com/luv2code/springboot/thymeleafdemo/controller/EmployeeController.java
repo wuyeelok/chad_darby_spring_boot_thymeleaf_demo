@@ -70,4 +70,14 @@ public class EmployeeController {
 		// Send over to our form
 		return "employees/employee-form";
 	}
+
+	@GetMapping("/delete")
+	public String delete(@RequestParam("employeeId") int theId) {
+
+		this.employeeService.deleteById(theId);
+
+		// Send over to our form
+		return "redirect:/employees/list";
+	}
+
 }
