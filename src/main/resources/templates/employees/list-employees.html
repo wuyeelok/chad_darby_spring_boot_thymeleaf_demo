@@ -18,7 +18,8 @@
 <body>
 
 	<div class="container">
-		<h3 data-th-text="'Employee Directory'">Employee Directory OFFLINE</h3>
+		<h3 data-th-text="'Employee Directory'">Employee Directory
+			OFFLINE</h3>
 		<hr>
 
 		<!--/* Add a button */-->
@@ -32,6 +33,7 @@
 					<th>First Name</th>
 					<th>Last Name</th>
 					<th>Email</th>
+					<th>Action</th>
 				</tr>
 			</thead>
 
@@ -40,6 +42,11 @@
 					<td data-th-text="${tempEmployee.firstName}">Donald</td>
 					<td data-th-text="${tempEmployee.lastName}">Trump</td>
 					<td data-th-text="${tempEmployee.email}">truetd@gmail.com</td>
+
+					<!--/* Add update button/link */-->
+					<td><a href="./employee-form.html"
+						data-th-href="@{/employees/showFormForUpdate(employeeId=${tempEmployee.id})}"
+						class="btn btn-info btn-sm">Update</a></td>
 				</tr>
 			</tbody>
 		</table>

@@ -28,7 +28,9 @@
 			data-th-action="@{/employees/save}" data-th-object="${employee}"
 			method="post">
 
-			<input type="text" data-th-field="*{firstName}"
+			<!--/* Add a hidden form field to handle update */-->
+			<input type="hidden" data-th-field="*{id}"> <input
+				type="text" data-th-field="*{firstName}"
 				class="form-control mb-4 col-4" placeholder="First name"> <input
 				type="text" data-th-field="*{lastName}"
 				class="form-control mb-4 col-4" placeholder="Last name"> <input
